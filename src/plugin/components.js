@@ -5,7 +5,7 @@ function camelCaseToDash (myStr) {
   return myStr.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().replace(/([a-z])([0-9])/g, '$1-$2')
 }
 
-export const bulmaComponentGenerator = (name) => ({
+export const componentGenerator = (name) => ({
   name,
   functional: true,
   render (h, {children, props, ...others}) {

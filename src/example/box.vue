@@ -1,7 +1,7 @@
 <template>
   <b-columns>
     <b-column is-4 is-offset-4>
-      <b-box>
+      <box>
         <b-media>
           <b-media-left>
             <b-image is-64x64>
@@ -31,17 +31,20 @@
             </nav>
           </b-media-content>
       </b-media>
-    </b-box>
+      </box>
     </b-column>
   </b-columns>
 </template>
 <style>
 </style>
 <script>
-
+import { bulmaComponentGenerator } from '../plugin/plugin'
 export default {
   data () {
     return {}
+  },
+  components: {
+    box: bulmaComponentGenerator('box')
   }
 }
 </script>

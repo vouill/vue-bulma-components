@@ -1,7 +1,7 @@
 {
   "name": "vue-bulma-components",
   "version": "1.0.0",
-  "description": "Template to quickly setup vue plugins",
+  "description": "Quickly Translate Bulma css in to vue components",
   "author": "Vouill <vouillon.thibaud@gmail.com>",
   "main": "./lib/vue-bulma-components.js",
   "bugs": "https://github.com/vouill/vue-bulma-components/issues",

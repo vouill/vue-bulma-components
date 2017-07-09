@@ -3,7 +3,7 @@
     <b-column is-10 is-offset-1 >
      <b-columns>
         <b-column>
-          <b-notification is-info>First column</b-notification>
+          <b-notification @click="greet" is-info>First column</b-notification>
         </b-column>
         <b-column>
           <b-notification is-success>Second column</b-notification>

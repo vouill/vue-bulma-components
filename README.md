@@ -1,6 +1,12 @@
 # vue-bulma-components
 The goal of this library is to use the bulma class syntax as components and props.
 
+Less than 3kb minified.
+
+[Demo](https://vouill.github.io/vue-bulma-components/) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
+
+/!\ Does not handle native html events and attributes perfectly. Only use for simple structural and visual components.
+
 ## Usage
 Exemple with grid system
 
@@ -32,7 +38,7 @@ or
 
 npm install --save vue-bulma-components
 ```
-
+### Use all components globally in your app
 Inside your main.js
 
 ```javascript
@@ -48,7 +54,23 @@ You can also prefix all the bulma components ( to avoid collision with existing 
  ```
  
  Instead of using `<columns/>` you need to use `<b-columns/>`
+### Use specific bulma components in your components
 
+```
+<template><box/></template>
+
+<script>
+import { bulmaComponentGenerator } from '../plugin/plugin'
+
+export default {
+  components: {
+      box: bulmaComponentGenerator('box')
+  }
+}
+</script>
+```
+
+Yes, you can actually create any vue-bulma-component by calling `bulmaComponentGenerator(bulmaComponentStr)`.
 ## Advanced
 ```html
 <button is-primary> Hello </button>
@@ -63,6 +85,7 @@ You can also prefix all the bulma components ( to avoid collision with existing 
 ```html
 <button outerElement="button" is-primary> Hello </button>
 ```
+
 
 
 
