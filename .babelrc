@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "stage-2"
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
+}
