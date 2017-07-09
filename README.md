@@ -5,7 +5,6 @@ Less than 3kb minified.
 
 [Demo](https://vouill.github.io/vue-bulma-components/) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
 
-/!\ Does not handle native html events and attributes perfectly. Only use for simple structural and visual components.
 
 ## Usage
 Exemple with grid system

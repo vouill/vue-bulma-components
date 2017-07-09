@@ -8,19 +8,20 @@ function camelCaseToDash (myStr) {
 export const componentGenerator = (name) => ({
   name,
   functional: true,
-  render (h, {children, props, ...others}) {
+  render (h, {children, props, data, ...others}) {
     const {outerElement, ...otherProps} = props
     return h(outerElement || 'div',
       {
         class: [camelCaseToDash(name), ...Object.keys(otherProps)
+          .filter(key => (
+            (otherProps[key] !== false)))
           .map(str => camelCaseToDash(str))
           .filter(key => (
-            (otherProps[key] !== false) &&
             ((key.substring(0, 3) === 'is-') ||
-            (key.substring(0, 3) === 'has-'))
+            (key.substring(0, 4) === 'has-'))
           ))
         ],
-        on: others.data.on
+        ...data
       }, children)
   }
 })
@@ -88,5 +89,6 @@ export default [
   'tabs',
   'container',
   'hero',
-  'hero-body'
+  'hero-body',
+  'input'
 ]
