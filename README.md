@@ -77,7 +77,7 @@ Yes, you can actually create any vue-bulma-component by calling `bulmaComponentG
 ```
  
  Actually renders as :
- ```
+ ```html
  <div class="button is-primary"> Hello </div>
  ```
  
