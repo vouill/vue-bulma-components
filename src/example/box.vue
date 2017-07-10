@@ -1,39 +1,39 @@
 <template>
-  <b-columns>
-    <b-column is-4 is-offset-4>
+  <columns>
+    <column is-4 is-offset-4>
       <box>
-        <b-media>
-          <b-media-left>
+        <media>
+          <media-left>
             <b-image is-64x64>
               <img src="http://bulma.io/images/placeholders/128x128.png" alt="Image">
             </b-image>
-          </b-media-left>
-          <b-media-content>
-            <b-content>
+          </media-left>
+          <media-content>
+            <content>
               <p>
                 <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
                 <br>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
               </p>
-            </b-content>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                <a class="level-item">
-                  <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                </a>
-                <a class="level-item">
-                  <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                </a>
-                <a class="level-item">
-                  <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                </a>
-              </div>
-            </nav>
-          </b-media-content>
-      </b-media>
+            </content>
+            <level is-mobile>
+              <level-left>
+                <level-item outerElement="a">
+                  <icon is-small><i class="fa fa-reply"></i></icon>
+                </level-item>
+                <level-item outerElement="a">
+                  <icon is-small><i class="fa fa-retweet"></i></icon>
+                </level-item>
+                <level-item outerElement="a">
+                  <icon is-small><i class="fa fa-heart"></i></icon>
+                </level-item>
+              </level-left>
+            </level>
+          </media-content>
+      </media>
       </box>
-    </b-column>
-  </b-columns>
+    </column>
+  </columns>
 </template>
 <style>
 </style>

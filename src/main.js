@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import Plugin from './plugin/plugin'
 
-Vue.use(Plugin, {prefix: 'b-'})
+Vue.use(Plugin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

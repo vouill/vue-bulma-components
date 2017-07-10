@@ -5,12 +5,20 @@ function camelCaseToDash (myStr) {
   return myStr.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().replace(/([a-z])([0-9])/g, '$1-$2')
 }
 
+const outerElementsMap = new Map([
+  ['input', 'input'],
+  ['label', 'label'],
+  ['button', 'button'],
+  ['image', 'figure'],
+  ['form', 'form']
+])
+
 export const componentGenerator = (name) => ({
   name,
   functional: true,
-  render (h, {children, props, data, ...others}) {
+  render (h, {children, props, data}) {
     const {outerElement, ...otherProps} = props
-    return h(outerElement || 'div',
+    return h(outerElement || outerElementsMap.get(name) || 'div',
       {
         class: [camelCaseToDash(name), ...Object.keys(otherProps)
           .filter(key => (

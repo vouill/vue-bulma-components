@@ -5,21 +5,21 @@
     <hr/>
     <Box/>
     <hr/>
-    <Form/>
+    <FormComponent/>
   </div>
 </template>
 
 <script>
 import Grid from './example/grid.vue'
 import Box from './example/box.vue'
-import Form from './example/form.vue'
+import FormComponent from './example/form.vue'
 
 export default {
   name: 'app',
   components: {
     Grid,
     Box,
-    Form
+    FormComponent
   }
 }
 </script>

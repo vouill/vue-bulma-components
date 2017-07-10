@@ -1,22 +1,22 @@
 <template>
-  <b-columns>
-    <b-column is-4 is-offset-4>
-  <b-field outerElement="form" @submit.prevent="login">
-  <b-label outerElement="label">Username</b-label>
-  <b-control has-icons has-icons-left has-icons-right outerElement="p">
-    <b-input outerElement="input" :is-success="flag" :is-danger="!flag" @input="toggle" type="text" placeholder="Text input" value="bulma"/>
-    <b-icon outerElement="span" is-small is-left>
+  <columns>
+    <column is-4 is-offset-4>
+  <field outerElement="form" @submit.prevent="login">
+  <label>Username</label>
+  <control has-icons has-icons-left has-icons-right outerElement="p">
+    <b-input :is-success="flag" :is-danger="!flag" @input="toggle" type="text" placeholder="Text input" value="bulma"/>
+    <icon outerElement="span" is-small is-left>
       <i class="fa fa-user"></i>
-    </b-icon>
-    <b-icon v-if="flag" outerElement="span" is-small is-right>
+    </icon>
+    <icon v-if="flag" outerElement="span" is-small is-right>
       <i class="fa fa-check"></i>
-    </b-icon>
-  </b-control>
-  <b-help is-success>This username is available</b-help>
-      <b-button outerElement="button" type="submit" @click="greet" is-primary>Go</b-button>
-  </b-field>
-    </b-column>
-  </b-columns>
+    </icon>
+  </control>
+  <help is-success>This username is available</help>
+      <b-button type="submit" @click="greet" is-primary>Go</b-button>
+  </field>
+    </column>
+  </columns>
 </template>
 <style>
 </style>
