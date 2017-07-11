@@ -13,12 +13,12 @@ const outerElementsMap = new Map([
   ['form', 'form']
 ])
 
-export const componentGenerator = (name) => ({
+export const componentGenerator = (name, reqOuterElement) => ({
   name,
   functional: true,
   render (h, {children, props, data}) {
     const {outerElement, ...otherProps} = props
-    return h(outerElement || outerElementsMap.get(name) || 'div',
+    return h(outerElement || reqOuterElement || outerElementsMap.get(name) || 'div',
       {
         class: [camelCaseToDash(name), ...Object.keys(otherProps)
           .filter(key => (
