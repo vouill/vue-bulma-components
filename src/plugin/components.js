@@ -26,7 +26,8 @@ export const componentGenerator = (name, reqOuterElement) => ({
           .map(str => camelCaseToDash(str))
           .filter(key => (
             ((key.substring(0, 3) === 'is-') ||
-            (key.substring(0, 4) === 'has-'))
+            (key.substring(0, 4) === 'has-') ||
+            (key.substring(0,3) === 'fa-'))
           ))
         ],
         ...data
