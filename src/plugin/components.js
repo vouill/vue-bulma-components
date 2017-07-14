@@ -10,7 +10,9 @@ const outerElementsMap = new Map([
   ['label', 'label'],
   ['button', 'button'],
   ['image', 'figure'],
-  ['form', 'form']
+  ['form', 'form'],
+  ['icon', 'span'],
+  ['fa', 'i']
 ])
 
 export const componentGenerator = (name, reqOuterElement) => ({
@@ -99,5 +101,6 @@ export default [
   'container',
   'hero',
   'hero-body',
-  'input'
+  'input',
+  'fa'
 ]
