@@ -100,7 +100,9 @@ export default [
   'tabs',
   'container',
   'hero',
+  'hero-head',
   'hero-body',
   'input',
   'fa'
+  'hero-foot',
 ]
