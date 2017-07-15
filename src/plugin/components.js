@@ -10,7 +10,9 @@ const outerElementsMap = new Map([
   ['label', 'label'],
   ['button', 'button'],
   ['image', 'figure'],
-  ['form', 'form']
+  ['form', 'form'],
+  ['icon', 'span'],
+  ['fa', 'i']
 ])
 
 export const componentGenerator = (name, reqOuterElement) => ({
@@ -26,7 +28,8 @@ export const componentGenerator = (name, reqOuterElement) => ({
           .map(str => camelCaseToDash(str))
           .filter(key => (
             ((key.substring(0, 3) === 'is-') ||
-            (key.substring(0, 4) === 'has-'))
+            (key.substring(0, 4) === 'has-') ||
+            (key.substring(0,3) === 'fa-'))
           ))
         ],
         ...data
@@ -99,6 +102,7 @@ export default [
   'hero',
   'hero-head',
   'hero-body',
+  'input',
+  'fa'
   'hero-foot',
-  'input'
 ]
