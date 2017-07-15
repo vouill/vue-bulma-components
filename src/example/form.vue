@@ -6,10 +6,10 @@
   <control has-icons has-icons-left has-icons-right outerElement="p">
     <b-input :is-success="flag" :is-danger="!flag" @input="toggle" type="text" placeholder="Text input" value="bulma"/>
     <icon outerElement="span" is-small is-left>
-      <i class="fa fa-user"></i>
+      <fa fa-user />
     </icon>
     <icon v-if="flag" outerElement="span" is-small is-right>
-      <i class="fa fa-check"></i>
+      <fa fa-check />
     </icon>
   </control>
   <help is-success>This username is available</help>

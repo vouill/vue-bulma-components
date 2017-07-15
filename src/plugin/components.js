@@ -29,7 +29,7 @@ export const componentGenerator = (name, reqOuterElement) => ({
           .filter(key => (
             ((key.substring(0, 3) === 'is-') ||
             (key.substring(0, 4) === 'has-') ||
-            (key.substring(0,3) === 'fa-'))
+            (key.substring(0, 3) === 'fa-'))
           ))
         ],
         ...data
@@ -103,6 +103,6 @@ export default [
   'hero-head',
   'hero-body',
   'input',
-  'fa'
-  'hero-foot',
+  'fa',
+  'hero-foot'
 ]
