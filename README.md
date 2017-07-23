@@ -113,7 +113,7 @@ Usage:
 
 Currently you cannot use v-model with `<b-input>` as expected. Because `vue-bulma-components` use functional components.
 
-Dont't worry, you can still bind a value to a `<b-input>` component using `@input` event (it's what v-model does under the hood):
+Don't worry, you can still bind a value to a `<b-input>` component using `@input` event (it's what v-model does under the hood):
 
 ```html
 <template>
