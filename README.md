@@ -92,7 +92,7 @@ Ex :
 
 **If you generate bulma components**
 
-``` htmtl
+``` html
 <script>
 import { bulmaComponentGenerator } from 'vue-bulma-components'
 
