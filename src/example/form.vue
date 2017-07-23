@@ -2,17 +2,17 @@
   <columns>
     <column is-4 is-offset-4>
   <field outerElement="form" @submit.prevent="login">
-  <label>Username</label>
+  <label>Username: {{username}}</label>
   <control has-icons has-icons-left has-icons-right outerElement="p">
-    <b-input :is-success="flag" :is-danger="!flag" @input="toggle" type="text" placeholder="Text input" value="bulma"/>
+    <b-input :is-success="username" :is-danger="!username" @input="handleInputChange" :value="username" type="text" placeholder="Text input"/>
     <icon outerElement="span" is-small is-left>
       <fa fa-user />
     </icon>
-    <icon v-if="flag" outerElement="span" is-small is-right>
+    <icon outerElement="span" is-small is-right>
       <fa fa-check />
     </icon>
   </control>
-  <help is-success>This username is available</help>
+  <help v-if="username"is-success>This username is available</help>
       <b-button type="submit" @click="greet" is-primary>Go</b-button>
   </field>
     </column>
@@ -29,13 +29,13 @@
       greet: function () {
         console.log('hey')
       },
-      toggle: function () {
-        this.flag = !this.flag
+      handleInputChange: function (e) {
+        this.username = e.target.value
       }
     },
     data () {
       return {
-        flag: true
+        username: ''
       }
     }
   }

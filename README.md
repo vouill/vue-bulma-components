@@ -47,23 +47,23 @@ import vueBulmaComponents from 'vue-bulma-components'
 Vue.use(vueBulmaComponents)
 ```
 
-You can also prefix all the bulma components ( to avoid collision with existing components)
+You can also prefix all the bulma components (to avoid collision with existing components in your project)
  
  ```javascript
  import vueBulmaComponents from 'vue-bulma-components'
- Vue.use(vueBulmaComponents,{prefix:'y-'})
+ Vue.use(vueBulmaComponents, {prefix: 'y-'})
  ```
  
  Instead of using `<columns/>` you need to use `<y-columns/>`
 ### Use specific bulma components in your components
 
-```
+``` html
 <template>
   <box/>
 </template>
 
 <script>
-import { bulmaComponentGenerator } from '../plugin/plugin'
+import { bulmaComponentGenerator } from 'vue-bulma-components'
 
 export default {
   components: {
@@ -77,14 +77,14 @@ Yes, you can actually create any vue-bulma-component by calling `bulmaComponentG
 
 ## Components
 
-By default, most of the components are rendered as `<div>`. You can use the prop `outerElement="span"`.
+By default, most of the components are rendered as `<div>`. You can also use the prop `outerElement="span"` to change this behavior.
 
 **If you use the `Vue.use()` method to use the vue-bulma-components.**
  
 Most of the components are named after the bulma class they belong to.
 Ex: `<box/> <card/> <panel/> ...`
 
-However, some bulma components are also named after html element.
+However, some bulma components are also named after native html element. This is why [they are prefixed](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L24).
 
 Ex : 
 - Bulma : `input`
@@ -92,9 +92,9 @@ Ex :
 
 **If you generate bulma components**
 
-```
+``` htmtl
 <script>
-import { bulmaComponentGenerator } from '../plugin/plugin'
+import { bulmaComponentGenerator } from 'vue-bulma-components'
 
 export default {
   components: {
@@ -104,8 +104,40 @@ export default {
 </script>
 ```
 
-Usage: `bulmaComponentGenerator(bulma_coponent_name,rendered_outer_html_element )`. `rendered_outer_html_element` is optional.
+Usage: 
+`bulmaComponentGenerator(bulma_coponent_name,rendered_outer_html_element )`.
+ 
+ Note : `rendered_outer_html_element` is optional.
 
+## Known limitations:
 
+Currently you cannot use v-model with `<b-input>` as expected. Because `vue-bulma-components` use functional components.
+
+Dont't worry, you can still bind a value to a `<b-input>` component using `@input` event (it's what v-model does under the hood):
+
+```html
+<template>
+  <control>
+    <b-input :value="foo" @change="handleInputChange"/>
+    {{foo}}
+  </control>
+  
+</template>
+
+<script>
+export default {
+  data () {
+    foo: ''
+  },
+  method: {
+    handleInputChange: function (e) {
+      this.foo = e.target.value
+    }
+  }
+}
+
+</script>
+
+```
 
 
