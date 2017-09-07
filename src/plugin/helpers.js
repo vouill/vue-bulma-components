@@ -107,6 +107,4 @@ export const bulmaComponentList = [
   'hero-foot'
 ]
 
-export function camelCaseToDash (myStr) {
-  return myStr.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().replace(/([a-z])([0-9])/g, '$1-$2')
-}
+export const camelCaseToDash = (myStr) => myStr && myStr.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase().replace(/([a-z])([0-9])/g, '$1-$2')
