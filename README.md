@@ -3,7 +3,7 @@ The goal of this library is to use the bulma class syntax as components and prop
 
 **3kb minified**
 
-[Demo](https://vouill.github.io/vue-bulma-components/) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
+[Demo](https://teller-multisystems-48055.netlify.com) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
 
 
 ## Usage
@@ -14,7 +14,7 @@ Original Bulma way:
 ``` html
 <div class="columns is-mobile">
   <div class="column is-half is-offset-one-quarter">
-    A column 
+    A column
    </div>
 </div>
 ```
@@ -33,7 +33,7 @@ Vue-bulma-component way:
 ```shell
 yarn add vue-bulma-components
 
-or 
+or
 
 npm install --save vue-bulma-components
 ```
@@ -48,12 +48,12 @@ Vue.use(vueBulmaComponents)
 ```
 
 You can also prefix all the bulma components (to avoid collision with existing components in your project)
- 
+
  ```javascript
  import vueBulmaComponents from 'vue-bulma-components'
  Vue.use(vueBulmaComponents, {prefix: 'y-'})
  ```
- 
+
  Instead of using `<columns/>` you need to use `<y-columns/>`
 ### Use specific bulma components in your components
 
@@ -80,13 +80,13 @@ Yes, you can actually create any vue-bulma-component by calling `bulmaComponentG
 By default, most of the components are rendered as `<div>`. You can also use the prop `outerElement="span"` to change this behavior.
 
 **If you use the `Vue.use()` method to use the vue-bulma-components.**
- 
+
 Most of the components are named after the bulma class they belong to.
 Ex: `<box/> <card/> <panel/> ...`
 
 However, some bulma components are also named after native html element. This is why [they are prefixed](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L24).
 
-Ex : 
+Ex :
 - Bulma : `input`
 - vue-component-bulma: `<b-input>`. This prefix is used to avoid collision with native html `<input>` element.
 
@@ -104,9 +104,9 @@ export default {
 </script>
 ```
 
-Usage: 
+Usage:
 `bulmaComponentGenerator(bulma_coponent_name,rendered_outer_html_element )`.
- 
+
  Note : `rendered_outer_html_element` is optional.
 
 ## Known limitations:
@@ -121,7 +121,7 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
     <b-input :value="foo" @change="handleInputChange"/>
     {{foo}}
   </control>
-  
+
 </template>
 
 <script>
