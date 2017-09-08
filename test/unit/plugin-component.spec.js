@@ -1,15 +1,21 @@
-import Vue from 'vue/dist/vue.js';
-import {componentGenerator} from 'src/plugin/components';
+import Vue from 'vue/dist/vue.js'
+import { shallow } from 'vue-test-utils'
+import {componentGenerator} from 'src/plugin/components'
 
 describe('Bulma component generator ', () => {
   it('should create a basic bulma component', () => {
-    const vm = new Vue({
-      template: '<div><box></box></div>',
-      components: {
-        'box': componentGenerator('box')
-      }
-    }).$mount()
-    expect(vm.$el.querySelector('.box')).toMatchSnapshot()
+    const wrapper = shallow(componentGenerator('panel'), {
+      context: {}})
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+  it('should trigger events', () => {
+    const onClick = jest.fn()
+    const wrapper = shallow(componentGenerator('box'), {
+      context: { props: { isPrimary: true }, on: {click: onClick} }
+    })
+    expect(onClick.mock.calls.length).toBe(0)
+    wrapper.trigger('click')
+    expect(onClick.mock.calls.length).toBe(1)
   })
   it('should create a basic bulma component w/ children', () => {
     const vm = new Vue({
@@ -22,33 +28,26 @@ describe('Bulma component generator ', () => {
   })
 
   it('should create a basic bulma component with modifiers', () => {
-    const vm = new Vue({
-      template: '<div><box is-primary></box></div>',
-      components: {
-        'box': componentGenerator('box')
-      }
-    }).$mount()
-    expect(vm.$el.querySelector('.box.is-primary')).toMatchSnapshot()
+    const wrapper = shallow(componentGenerator('box'), {
+      context: { props: { isPrimary: true }
+      }})
+    expect(wrapper.html()).toMatchSnapshot()
+    const wrapper2 = shallow(componentGenerator('box'), {
+      context: { props: { 'is-2': true }
+      }})
+    expect(wrapper2.html()).toMatchSnapshot()
   })
 
   it('should create a basic bulma component with modifiers binded to false', () => {
-    const vm = new Vue({
-      template: '<div><box :is-primary="false"></box></div>',
-      components: {
-        'box': componentGenerator('box')
-      }
-    }).$mount()
-    expect(vm.$el.querySelector('.box.is-primary')).toBeNull()
-    expect(vm.$el.querySelector('.box')).toMatchSnapshot()
+    const wrapper = shallow(componentGenerator('box'), {
+      context: { props: { isPrimary: false }
+      }})
+    expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should create a empty div w/ no class', () => {
-    const vm = new Vue({
-      template: '<span><test></test></span>',
-      components: {
-        'test': componentGenerator()
-      }
-    }).$mount()
-    expect(vm.$el.querySelector('div')).toMatchSnapshot()
+    const wrapper = shallow(componentGenerator(), {
+      context: {}})
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
