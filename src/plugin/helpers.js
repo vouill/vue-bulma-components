@@ -107,17 +107,9 @@ export const bulmaComponentList = [
   'hero-foot'
 ]
 
-export function camelCaseToDash (myStr) {
-  return myStr
+export const camelCaseToDash = myStr =>
+  myStr &&
+  myStr
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .toLowerCase()
     .replace(/([a-z])([0-9])/g, '$1-$2')
-}
-
-export const isBulmaAttribute = attr => !['is-', 'has-', 'fa-'].indexOf(attr)
-
-export const getOutrEl = (outrEl, reqOutrEl, defaultEl = 'div') => {
-  return (
-    outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(name) || defaultEl
-  )
-}
