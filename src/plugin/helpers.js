@@ -113,3 +113,10 @@ export const camelCaseToDash = myStr =>
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .toLowerCase()
     .replace(/([a-z])([0-9])/g, '$1-$2')
+
+// thanks the solution @israelroldan
+export const isBulmaAttribute = attr =>
+  attr.trim() && /^(is|has|fa)-.+/.test(attr)
+
+export const getOutrEl = (outrEl, reqOutrEl, defaultEl = 'div') =>
+  outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(name) || defaultEl
