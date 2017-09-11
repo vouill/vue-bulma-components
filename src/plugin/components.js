@@ -1,27 +1,34 @@
 /**
  * Created by Vouill on 09/07/17.
  */
-import { vueBulmaDefaultRenderElement, camelCaseToDash } from './helpers'
+import { camelCaseToDash, isBulmaAttribute, getOutrEl } from './helpers'
 
 export const componentGenerator = (name, reqOuterElement) => ({
   name,
   functional: true,
-  render (h, {children, props, data}) {
-    const {outerElement, ...otherProps} = props
-    return h(outerElement || reqOuterElement || vueBulmaDefaultRenderElement.get(name) || 'div',
-      {
-        class: [camelCaseToDash(name), ...Object.keys(otherProps)
-          .filter(key => (
-            (otherProps[key] !== false)))
+  render (h, { children, props, data }) {
+    const { outerElement, ...otherProps } = props
+
+    /*
+     * Remove attribute only if it is from Bulma
+     */
+    if (data.hasOwnProperty('attrs')) {
+      Object.keys(data.attrs).forEach(key => {
+        if (isBulmaAttribute(key)) delete data.attrs[key]
+      })
+    }
+
+    const attrs = {
+      class: [
+        camelCaseToDash(name),
+        ...Object.keys(otherProps)
+          .filter(key => otherProps[key] !== false)
           .map(str => camelCaseToDash(str))
-          .filter(key => (
-            ((key.substring(0, 3) === 'is-') ||
-            (key.substring(0, 4) === 'has-') ||
-            (key.substring(0, 3) === 'fa-'))
-          ))
-        ],
-        ...data
-      }, children)
+          .filter(key => isBulmaAttribute(key))
+      ],
+      ...data
+    }
+
+    return h(getOutrEl(outerElement, reqOuterElement, name), attrs, children)
   }
 })
-

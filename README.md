@@ -63,13 +63,13 @@ You can also prefix all the bulma components (to avoid collision with existing c
 </template>
 
 <script>
-import { bulmaComponentGenerator } from 'vue-bulma-components'
+  import { bulmaComponentGenerator } from 'vue-bulma-components'
 
-export default {
-  components: {
-      box: bulmaComponentGenerator('box')
+  export default {
+    components: {
+        box: bulmaComponentGenerator('box')
+    }
   }
-}
 </script>
 ```
 
@@ -94,20 +94,20 @@ Ex :
 
 ``` html
 <script>
-import { bulmaComponentGenerator } from 'vue-bulma-components'
+  import { bulmaComponentGenerator } from 'vue-bulma-components'
 
-export default {
-  components: {
-      box: bulmaComponentGenerator('box', 'span')
+  export default {
+    components: {
+        box: bulmaComponentGenerator('box', 'span')
+    }
   }
-}
 </script>
 ```
 
 Usage:
 `bulmaComponentGenerator(bulma_coponent_name,rendered_outer_html_element )`.
 
- Note : `rendered_outer_html_element` is optional.
+Note: `rendered_outer_html_element` is optional.
 
 ## Known limitations:
 
@@ -125,17 +125,16 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 </template>
 
 <script>
-export default {
-  data () {
-    foo: ''
-  },
-  method: {
-    handleInputChange: function (e) {
-      this.foo = e.target.value
+  export default {
+    data: () => ({
+      foo: ''
+    }),
+    method: {
+      handleInputChange (e) {
+        this.foo = e.target.value
+      }
     }
   }
-}
-
 </script>
 
 ```
