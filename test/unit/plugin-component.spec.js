@@ -59,6 +59,13 @@ describe('Bulma component generator ', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
+  it('should create input', () => {
+    const wrapper = shallow(componentGenerator('input'), {
+      context: {}
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('should delete added props', () => {
     const wrapper = shallow(componentGenerator('container'), {
       context: {
