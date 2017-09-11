@@ -29,6 +29,6 @@ export const componentGenerator = (name, reqOuterElement) => ({
       ...data
     }
 
-    return h(getOutrEl(outerElement, reqOuterElement), attrs, children)
+    return h(getOutrEl(outerElement, reqOuterElement, name), attrs, children)
   }
 })

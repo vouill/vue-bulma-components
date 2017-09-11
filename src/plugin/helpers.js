@@ -118,5 +118,5 @@ export const camelCaseToDash = myStr =>
 export const isBulmaAttribute = attr =>
   attr.trim() && /^(is|has|fa)-.+/.test(attr)
 
-export const getOutrEl = (outrEl, reqOutrEl, defaultEl = 'div') =>
-  outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(name) || defaultEl
+export const getOutrEl = (outrEl, reqOutrEl, elName, defaultEl = 'div') =>
+  outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(elName) || defaultEl
