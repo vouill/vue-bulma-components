@@ -1,5 +1,6 @@
 # vue-bulma-components
-[![Build Status](https://travis-ci.org/vouill/vue-bulma-components.svg?branch=master)](https://travis-ci.org/vouill/vue-bulma-components)
+[![Build Status](https://travis-ci.org/vouill/vue-bulma-components.svg?branch=feature%2Funit-tests)](https://travis-ci.org/vouill/vue-bulma-components)
+
 The goal of this library is to use the bulma class syntax as components and props.
 
 **3kb minified**
