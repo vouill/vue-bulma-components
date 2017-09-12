@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <hr/>
-    <Grid/>
-    <hr/>
-    <Box/>
-    <hr/>
-    <FormComponent/>
+    <router-view/>
   </div>
 </template>
 
