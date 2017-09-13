@@ -3,11 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import Plugin from './plugin/plugin'
+import router from './example/routes'
 
 Vue.use(Plugin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   template: '<App/>',
-  components: { App }
+  components: { App },
+  router
 })
