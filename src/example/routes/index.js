@@ -13,7 +13,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/box'
+      redirect: '/grid'
     }, {
       path: '/box',
       name: 'barid',
@@ -21,12 +21,12 @@ export default new Router({
     },
     {
       path: '/form',
-      name: 'progress',
+      name: 'form',
       component: BForm
     },
     {
       path: '/grid',
-      name: 'progress',
+      name: 'grid',
       component: Grid
     }
   ]

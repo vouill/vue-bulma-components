@@ -1,12 +1,12 @@
 <template>
-  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
+  <navbar is-dark role="navigation" aria-label="main navigation">
+  <navbar-brand>
     <router-link to="/" class="navbar-item vbc">VBC</router-link>
     <router-link to="/grid" class="navbar-item">Grid</router-link>
     <router-link to="/box" class="navbar-item">Box</router-link>
     <router-link to="/form" class="navbar-item">Form</router-link>
-  </div>
-</nav>
+  </navbar-brand>
+</navbar>
 </template>
 <style scoped>
   .vbc {
@@ -19,6 +19,6 @@
 </style>
 <script>
   export default {
-    name: 'navbar'
+    name: 'navbarComponent'
   }
 </script>
