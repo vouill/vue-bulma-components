@@ -66,7 +66,7 @@ When Bulma comes with new components, you can add them quickly:
  Vue.use(vueBulmaComponents, {
    componentList: [
      'new-bulma-component',
-     'another-new-bulma-component
+     'another-new-bulma-component'
    ]
  })
  ```
