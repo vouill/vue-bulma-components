@@ -57,6 +57,20 @@ You can also prefix all the bulma components (to avoid collision with existing c
  ```
 
  Instead of using `<columns/>` you need to use `<y-columns/>`
+
+### Add new Bulma components
+When Bulma comes with new components, you can add them quickly:
+
+ ```javascript
+ import vueBulmaComponents from 'vue-bulma-components'
+ Vue.use(vueBulmaComponents, {
+   componentList: [
+     'new-bulma-component',
+     'another-new-bulma-component
+   ]
+ })
+ ```
+
 ### Use specific bulma components in your components
 
 ``` html
