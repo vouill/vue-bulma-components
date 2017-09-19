@@ -31,7 +31,9 @@ export const nativeHtmlToVueBulma = new Map([
   ['progress', 'b-progress'],
   ['table', 'b-table'],
   ['title', 'b-title'],
-  ['menu', 'b-menu']
+  ['menu', 'b-menu'],
+  ['section', 'b-section'],
+  ['footer', 'b-footer']
 ])
 
 /*
