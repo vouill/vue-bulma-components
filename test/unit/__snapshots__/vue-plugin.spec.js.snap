@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bulma component generator  should access bulma componentized plugin 1`] = `
+Object {
+  "install": [Function],
+}
+`;
+
+exports[`Bulma component generator  should access the bulma component generator func  1`] = `[Function]`;
