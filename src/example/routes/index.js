@@ -7,6 +7,7 @@ const Box = () => import('../box')
 const Buttons = () => import('../buttons')
 const BForm = () => import('../form')
 const Grid = () => import('../grid')
+const More = () => import('../more')
 
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/grid',
       name: 'grid',
       component: Grid
+    },
+    {
+      path: '/more',
+      name: 'more',
+      component: More
     }
   ]
 })
