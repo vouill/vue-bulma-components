@@ -29,7 +29,7 @@ describe('Bulma component generator ', () => {
   })
 
   it('should create a basic bulma component with modifiers', () => {
-    const wrapper = shallow(componentGenerator('box'), {
+    const wrapper = shallow(componentGenerator('box', 'span'), {
       context: {
         props: { isPrimary: true }
       }

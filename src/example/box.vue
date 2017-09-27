@@ -1,6 +1,6 @@
 <template>
   <columns>
-    <column is-4 is-offset-4>
+    <column is-6 is-offset-3>
       <box>
         <media>
           <media-left>
@@ -35,7 +35,8 @@
     </column>
   </columns>
 </template>
-<style>
+<style scoped>
+
 </style>
 <script>
 import { bulmaComponentGenerator } from '../plugin/plugin'

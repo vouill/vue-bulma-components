@@ -5,7 +5,7 @@ The goal of this library is to use the bulma class syntax as components and prop
 
 **3kb minified**
 
-[Demo](https://teller-multisystems-48055.netlify.com) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
+[Demo](https://teller-multisystems-48055.netlify.com) and [try the live demo](https://codesandbox.io/s/wk2w3z0zk5) too :)
 
 
 ## Usage
@@ -40,7 +40,9 @@ or
 npm install --save vue-bulma-components
 ```
 
-Then install [Bulma](http://bulma.io/documentation/overview/start/)
+Then install [Bulma](http://bulma.io/documentation/overview/start/) however you want :).
+
+
 ### Use all components globally in your app
 Inside your main.js
 
@@ -120,7 +122,7 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 ```html
 <template>
   <control>
-    <b-input :value="foo" @change="handleInputChange"/>
+    <b-input :value="foo" @input="handleInputChange"/>
     {{foo}}
   </control>
 
