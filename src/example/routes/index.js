@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// import Home from '../components/home'
-// const Home = () => import('../components/home')
 const Box = () => import('../box')
 const Buttons = () => import('../buttons')
 const BForm = () => import('../form')
