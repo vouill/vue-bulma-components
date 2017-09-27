@@ -120,7 +120,7 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 ```html
 <template>
   <control>
-    <b-input :value="foo" @change="handleInputChange"/>
+    <b-input :value="foo" @input="handleInputChange"/>
     {{foo}}
   </control>
 
