@@ -40,7 +40,9 @@ or
 npm install --save vue-bulma-components
 ```
 
-Then install [Bulma](http://bulma.io/documentation/overview/start/)
+Then install [Bulma](http://bulma.io/documentation/overview/start/) however you want :).
+
+
 ### Use all components globally in your app
 Inside your main.js
 
