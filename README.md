@@ -5,7 +5,7 @@ The goal of this library is to use the bulma class syntax as components and prop
 
 **3kb minified**
 
-[Demo](https://teller-multisystems-48055.netlify.com) and the related [code](https://github.com/vouill/vue-bulma-components/tree/master/src/example).
+[Demo](https://teller-multisystems-48055.netlify.com) and [try the live demo](https://codesandbox.io/s/wk2w3z0zk5) too :)
 
 
 ## Usage
