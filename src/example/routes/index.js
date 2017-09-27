@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import Home from '../components/home'
 // const Home = () => import('../components/home')
 const Box = () => import('../box')
+const Buttons = () => import('../buttons')
 const BForm = () => import('../form')
 const Grid = () => import('../grid')
 
@@ -18,6 +19,10 @@ export default new Router({
       path: '/box',
       name: 'barid',
       component: Box
+    }, {
+      path: '/buttons',
+      name: 'buttons',
+      component: Buttons
     },
     {
       path: '/form',

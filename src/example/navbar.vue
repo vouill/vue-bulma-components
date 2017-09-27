@@ -5,6 +5,7 @@
     <router-link to="/grid" class="navbar-item">Grid</router-link>
     <router-link to="/box" class="navbar-item">Box</router-link>
     <router-link to="/form" class="navbar-item">Form</router-link>
+    <router-link to="/buttons" class="navbar-item">Buttons</router-link>
   </navbar-brand>
 </navbar>
 </template>
