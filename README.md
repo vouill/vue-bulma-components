@@ -30,6 +30,27 @@ Vue-bulma-component way:
 </columns>
 ```
 
+### Using css class as directives at your advantage 
+
+One cool feature of using the Bulma css api as directives is toggling them. See how the `is-loading` class is handled
+
+Ex:
+
+``` html
+<button class="button is-dark" :class="{ 'is-loading': bool }">
+  Send
+</button>
+```
+
+Vue-bulma-component way:
+``` html
+<b-button is-dark :is-loading"bool">
+  Send
+</b-button>
+```
+
+Much nicer right ? ;)
+
 ## Install
 
 ```shell
