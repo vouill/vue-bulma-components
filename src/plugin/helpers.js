@@ -83,6 +83,7 @@ export const bulmaComponentList = [
   'navbar-item',
   'navbar-brand',
   'navbar-burger',
+  'navbar-tabs',
   'navbar-menu',
   'navbar-start',
   'navbar-end',
