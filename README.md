@@ -104,6 +104,18 @@ Yes, you can actually create any vue-bulma-component by calling `bulmaComponentG
 
 By default, most of the components are rendered as `<div>`. You can also use the prop `outerElement="span"` to change this behavior.
 
+If you want to globally apply default outer element for some bulma component, you can use `outerElement` option on **`Vue.use()`**.
+
+```javascript
+import vueBulmaComponents from 'vue-bulma-components'
+Vue.use(vueBulmaComponents, {
+  outerElement: {
+    'navbar': 'nav',
+    'navbar-item': 'a'
+  }
+})
+```
+
 **If you use the `Vue.use()` method to use the vue-bulma-components.**
 
 Most of the components are named after the bulma class they belong to.
