@@ -4,7 +4,7 @@
 import { camelCaseToDash, isBulmaAttribute, getOutrEl } from './helpers'
 
 export const componentGenerator = (name, reqOuterElement) => ({
-  name,
+  name: `bulma-${name}`,
   functional: true,
   render (h, { children, props, data }) {
     const { outerElement, ...otherProps } = props
