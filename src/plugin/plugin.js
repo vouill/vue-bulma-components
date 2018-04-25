@@ -5,7 +5,7 @@ let plugin = {}
 
 plugin.install = function (Vue, option) {
   bulmaComponentList.forEach(name => {
-    Vue.component(`${(option && option.prefix) || ''}${nativeHtmlToVueBulma.get(name) || name}`, componentGenerator(name))
+    Vue.component(`${(option && option.prefix) || ''}${nativeHtmlToVueBulma.get(name) || name}`, componentGenerator(name, (option && option.outerElement[name]) || ''))
   })
 }
 
