@@ -1,6 +1,6 @@
 {
   "name": "vue-bulma-components",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Quickly Translate Bulma css in to vue components",
   "author": "Vouill <vouillon.thibaud@gmail.com>",
   "main": "./lib/vue-bulma-components.js",
