@@ -44,7 +44,7 @@ Ex:
 
 Vue-bulma-component way:
 ``` html
-<b-button is-dark :is-loading"bool">
+<b-button is-dark :is-loading="bool">
   Send
 </b-button>
 ```
