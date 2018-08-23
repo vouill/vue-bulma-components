@@ -72,7 +72,7 @@ import vueBulmaComponents from 'vue-bulma-components'
 Vue.use(vueBulmaComponents)
 ```
 
-its will allow you to have [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components available with the prefix `b-`.
+It will make globallly available all [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components with the prefix `b-`.
 
 You can also change the default prefix of all the bulma components (to avoid collision with existing components in your project)
 
