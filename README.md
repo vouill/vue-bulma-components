@@ -72,14 +72,16 @@ import vueBulmaComponents from 'vue-bulma-components'
 Vue.use(vueBulmaComponents)
 ```
 
-You can also prefix all the bulma components (to avoid collision with existing components in your project)
+its will allow you to have [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components available with the prefix `b-`.
+
+You can also change the default prefix of all the bulma components (to avoid collision with existing components in your project)
 
  ```javascript
  import vueBulmaComponents from 'vue-bulma-components'
  Vue.use(vueBulmaComponents, {prefix: 'y-'})
  ```
 
- Instead of using `<columns/>` you need to use `<y-columns/>`
+ Instead of using `<b-columns/>` you need to use `<y-columns/>`
 ### Use specific bulma components in your components
 
 ``` html
