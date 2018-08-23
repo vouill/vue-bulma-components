@@ -17,24 +17,6 @@ export const vueBulmaDefaultRenderElement = new Map([
 ])
 
 /*
-*   To avoid native HTML and vue-bulma-components collision (input for example),
-*   we append the 'b-' prefix to the component name.
-*   This is only done when using the Vue.use() way of installing vue-bulma-components
-*/
-export const nativeHtmlToVueBulma = new Map([
-  ['input', 'b-input'],
-  ['label', 'b-label'],
-  ['image', 'b-image'],
-  ['form', 'b-form'],
-  ['button', 'b-button'],
-  ['content', 'b-content'],
-  ['progress', 'b-progress'],
-  ['table', 'b-table'],
-  ['title', 'b-title'],
-  ['menu', 'b-menu']
-])
-
-/*
 *   This is the list of all available vue-bulma-components rendered when using Vue.use(). If one is missing, add it here.
 */
 export const bulmaComponentList = [

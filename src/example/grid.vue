@@ -1,22 +1,22 @@
 <template>
-  <columns>
-    <column is-10 is-offset-1 >
-     <columns>
-        <column>
-          <notification @click="greet" is-info>First column</notification>
-        </column>
-        <column>
-          <notification is-success>Second column</notification>
-        </column>
-        <column>
-          <notification is-warning>Third column</notification>
-        </column>
-        <column>
-          <notification is-danger>Fourth column</notification>
-        </column>
-     </columns>
-    </column>
-  </columns>
+  <b-columns>
+    <b-column is-10 is-offset-1 >
+     <b-columns>
+        <b-column>
+          <b-notification @click="greet" is-info>First column</b-notification>
+        </b-column>
+        <b-column>
+          <b-notification is-success>Second column</b-notification>
+        </b-column>
+        <b-column>
+          <b-notification is-warning>Third column</b-notification>
+        </b-column>
+        <b-column>
+          <b-notification is-danger>Fourth column</b-notification>
+        </b-column>
+     </b-columns>
+    </b-column>
+  </b-columns>
 </template>
 <script>
   export default {

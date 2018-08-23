@@ -23,14 +23,14 @@ Original Bulma way:
 
 Vue-bulma-component way:
 ```html
-<columns is-mobile>
-  <column is-half is-offset-one-quarter>
+<b-columns is-mobile>
+  <b-column is-half is-offset-one-quarter>
     A column
-  </column>
-</columns>
+  </b-column>
+</b-columns>
 ```
 
-### Using css class as directives at your advantage 
+### Using css class as directives at your advantage
 
 One cool feature of using the Bulma css api as directives is toggling them. See how the `is-loading` class is handled
 
@@ -84,7 +84,7 @@ You can also prefix all the bulma components (to avoid collision with existing c
 
 ``` html
 <template>
-  <box/>
+  <b-box/>
 </template>
 
 <script>
@@ -154,10 +154,10 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 
 ```html
 <template>
-  <control>
+  <b-control>
     <b-input :value="foo" @input="handleInputChange"/>
     {{foo}}
-  </control>
+  </b-control>
 
 </template>
 
