@@ -178,4 +178,8 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 
 ```
 
+Note:
+If you come from the version `1.x.x`, there is a breaking change.
+
+From `2.x.x` when using `Vue.use(vueBulmaComponents)`, default aailable components are prefixed by `<b-[bulmacomponent]/>` instead of `<[bulmacomponent]/>`
 
