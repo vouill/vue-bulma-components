@@ -23,14 +23,14 @@ Original Bulma way:
 
 Vue-bulma-component way:
 ```html
-<columns is-mobile>
-  <column is-half is-offset-one-quarter>
+<b-columns is-mobile>
+  <b-column is-half is-offset-one-quarter>
     A column
-  </column>
-</columns>
+  </b-column>
+</b-columns>
 ```
 
-### Using css class as directives at your advantage 
+### Using css class as directives at your advantage
 
 One cool feature of using the Bulma css api as directives is toggling them. See how the `is-loading` class is handled
 
@@ -72,19 +72,21 @@ import vueBulmaComponents from 'vue-bulma-components'
 Vue.use(vueBulmaComponents)
 ```
 
-You can also prefix all the bulma components (to avoid collision with existing components in your project)
+It will make globallly available all [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components with the prefix `b-`.
+
+You can also change the default prefix of all the bulma components (to avoid collision with existing components in your project)
 
  ```javascript
  import vueBulmaComponents from 'vue-bulma-components'
  Vue.use(vueBulmaComponents, {prefix: 'y-'})
  ```
 
- Instead of using `<columns/>` you need to use `<y-columns/>`
+ Instead of using `<b-columns/>` you need to use `<y-columns/>`
 ### Use specific bulma components in your components
 
 ``` html
 <template>
-  <box/>
+  <b-box/>
 </template>
 
 <script>
@@ -154,10 +156,10 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 
 ```html
 <template>
-  <control>
+  <b-control>
     <b-input :value="foo" @input="handleInputChange"/>
     {{foo}}
-  </control>
+  </b-control>
 
 </template>
 
@@ -176,4 +178,8 @@ Don't worry, you can still bind a value to a `<b-input>` component using `@input
 
 ```
 
+Note:
+If you come from the version `1.x.x`, there is a breaking change.
+
+From `2.x.x` when using `Vue.use(vueBulmaComponents)`, default available components are prefixed by `<b-[bulmacomponent]/>` instead of `<[bulmacomponent]/>`
 

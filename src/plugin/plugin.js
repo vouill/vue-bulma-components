@@ -1,11 +1,11 @@
 import { componentGenerator } from './components'
-import { nativeHtmlToVueBulma, bulmaComponentList } from './helpers'
+import { bulmaComponentList } from './helpers'
 
 let plugin = {}
 
 plugin.install = function (Vue, option) {
   bulmaComponentList.forEach(name => {
-    Vue.component(`${(option && option.prefix) || ''}${nativeHtmlToVueBulma.get(name) || name}`, componentGenerator(name, (option && option.outerElement[name]) || ''))
+    Vue.component(`${(option && option.prefix) || 'b-'}${name}`, componentGenerator(name, (option && option.outerElement[name]) || ''))
   })
 }
 

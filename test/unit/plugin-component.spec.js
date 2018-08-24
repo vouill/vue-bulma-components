@@ -1,17 +1,17 @@
 import Vue from 'vue/dist/vue.js'
-import { shallow } from 'vue-test-utils'
+import { shallowMount } from '@vue/test-utils'
 import { componentGenerator } from 'src/plugin/components'
 
 describe('Bulma component generator ', () => {
   it('should create a basic bulma component', () => {
-    const wrapper = shallow(componentGenerator('panel'), {
+    const wrapper = shallowMount(componentGenerator('panel'), {
       context: {}
     })
     expect(wrapper.html()).toMatchSnapshot()
   })
   it('should trigger events', () => {
     const onClick = jest.fn()
-    const wrapper = shallow(componentGenerator('box'), {
+    const wrapper = shallowMount(componentGenerator('box'), {
       context: { props: { isPrimary: true }, on: { click: onClick } }
     })
     expect(onClick.mock.calls.length).toBe(0)
@@ -29,13 +29,13 @@ describe('Bulma component generator ', () => {
   })
 
   it('should create a basic bulma component with modifiers', () => {
-    const wrapper = shallow(componentGenerator('box', 'span'), {
+    const wrapper = shallowMount(componentGenerator('box', 'span'), {
       context: {
         props: { isPrimary: true }
       }
     })
     expect(wrapper.html()).toMatchSnapshot()
-    const wrapper2 = shallow(componentGenerator('box'), {
+    const wrapper2 = shallowMount(componentGenerator('box'), {
       context: {
         props: { 'is-2': true }
       }
@@ -44,7 +44,7 @@ describe('Bulma component generator ', () => {
   })
 
   it('should create a basic bulma component with modifiers binded to false', () => {
-    const wrapper = shallow(componentGenerator('box'), {
+    const wrapper = shallowMount(componentGenerator('box'), {
       context: {
         props: { isPrimary: false }
       }
@@ -53,21 +53,21 @@ describe('Bulma component generator ', () => {
   })
 
   it('should create a empty div w/ no class', () => {
-    const wrapper = shallow(componentGenerator(), {
+    const wrapper = shallowMount(componentGenerator(), {
       context: {}
     })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should create input', () => {
-    const wrapper = shallow(componentGenerator('input'), {
+    const wrapper = shallowMount(componentGenerator('input'), {
       context: {}
     })
     expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should delete added props', () => {
-    const wrapper = shallow(componentGenerator('container'), {
+    const wrapper = shallowMount(componentGenerator('container'), {
       context: {
         props: {
           isFluid: false,
