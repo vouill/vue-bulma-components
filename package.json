@@ -15,9 +15,13 @@
     "build:lib": "webpack --bail --progress --hide-modules --config build/webpack.lib.conf.js",
     "test": "npm run lint; jest",
     "test-watch": "jest --watch",
-    "lint": "eslint --ext .js,.vue src test/unit/"
+    "lint": "eslint --ext .js,.vue src test/unit/",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bulma": "^0.7.1"
+  },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.24",
     "autoprefixer": "^6.7.2",
@@ -54,8 +58,10 @@
     "jest": "^21.0.1",
     "jest-vue": "^0.5.2",
     "lolex": "^1.5.2",
+    "node-sass": "^4.9.3",
     "opn": "^4.0.2",
     "ora": "^1.1.0",
+    "sass-loader": "^7.1.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "url-loader": "^0.5.7",
@@ -64,6 +70,7 @@
     "vue-router": "2.7.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.4.2",
+    "vuepress": "^0.14.2",
     "webpack": "^2.4.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",

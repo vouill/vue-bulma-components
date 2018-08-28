@@ -14,7 +14,10 @@ export const vueBulmaDefaultRenderElement = new Map([
   ['image', 'figure'],
   ['input', 'input'],
   ['label', 'label'],
-  ['textarea', 'textarea']
+  ['textarea', 'textarea'],
+  ['navbar', 'nav'],
+  ['menu-list', 'ul'],
+  ['menu', 'aside']
 ])
 
 /*
@@ -116,7 +119,8 @@ export const bulmaComponentList = [
   'tag',
   'tags',
   'textarea',
-  'title'
+  'title',
+  'footer'
 ]
 
 export const camelCaseToDash = myStr =>
