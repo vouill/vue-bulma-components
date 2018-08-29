@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bulma component generator  should create a basic bulma component 1`] = `"<div class=\\"panel\\"></div>"`;
+
+exports[`Bulma component generator  should create a basic bulma component with modifiers 1`] = `"<span class=\\"box is-primary\\"></span>"`;
+
+exports[`Bulma component generator  should create a basic bulma component with modifiers 2`] = `"<div class=\\"box is-2\\"></div>"`;
+
+exports[`Bulma component generator  should create a basic bulma component with modifiers binded to false 1`] = `"<div class=\\"box\\"></div>"`;
+
+exports[`Bulma component generator  should create a empty div w/ no class 1`] = `"<div class=\\"\\"></div>"`;
+
+exports[`Bulma component generator  should create input 1`] = `"<input class=\\"input\\">"`;
