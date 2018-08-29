@@ -55,6 +55,7 @@ export const bulmaComponentList = [
   'file-label',
   'file-name',
   'file',
+  'footer',
   'help',
   'hero-body',
   'hero-foot',
@@ -120,8 +121,7 @@ export const bulmaComponentList = [
   'tag',
   'tags',
   'textarea',
-  'title',
-  'footer'
+  'title'
 ]
 
 export const camelCaseToDash = myStr =>

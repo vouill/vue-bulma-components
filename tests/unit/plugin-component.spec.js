@@ -76,7 +76,7 @@ describe('Bulma component generator ', () => {
       }
     })
 
-    expect(wrapper.hasProp('is-fluid')).toBe(false)
-    expect(wrapper.hasProp('is-widescreen')).toBe(false)
+    expect(wrapper.props('is-fluid')).toBe(false)
+    expect(wrapper.props('is-widescreen')).toBe(false)
   })
 })
