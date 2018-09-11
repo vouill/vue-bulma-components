@@ -1,4 +1,4 @@
-import Vue from 'vue/dist/vue.js'
+import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import { componentGenerator } from 'src/plugin/components'
 
