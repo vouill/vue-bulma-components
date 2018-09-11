@@ -8,6 +8,8 @@ module.exports = {
     filename: 'vue-bulma-components.common.js',
     library: 'vue-bulma-components',
     libraryTarget: 'umd',
-    umdNamedDefine: true
-  }
+    umdNamedDefine: true,
+    libraryTarget: 'commonjs'
+  },
+  devtool: '#source-map'
 };
