@@ -1,7 +1,7 @@
 /**
  * Created by Vouill on 09/07/17.
  */
-import { camelCaseToDash, isBulmaAttribute, getOutrEl } from './helpers'
+import { camelCaseToDash, isBulmaAttribute, isInternalAttribute, getOutrEl } from './helpers'
 
 export const componentGenerator = (name, reqOuterElement) => ({
   name: `bulma-${name}`,
@@ -14,7 +14,7 @@ export const componentGenerator = (name, reqOuterElement) => ({
      */
     if (data.hasOwnProperty('attrs')) {
       Object.keys(data.attrs).forEach(key => {
-        if (isBulmaAttribute(key)) delete data.attrs[key]
+        if (isBulmaAttribute(key) || isInternalAttribute(key)) delete data.attrs[key]
       })
     }
 
