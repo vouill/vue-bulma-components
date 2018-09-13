@@ -135,5 +135,8 @@ export const camelCaseToDash = myStr =>
 export const isBulmaAttribute = attr =>
   attr.trim() && /^(is|has|fa)-.+/.test(attr)
 
+const internalAttribute = ['outerElement', 'outer-element']
+export const isInternalAttribute = attr => attr.trim() && internalAttribute.indexOf(attr) > -1
+
 export const getOutrEl = (outrEl, reqOutrEl, elName, defaultEl = 'div') =>
   outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(elName) || defaultEl
