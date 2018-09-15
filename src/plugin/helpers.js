@@ -51,6 +51,7 @@ export const bulmaComponentList = [
   'file-label',
   'file-name',
   'file',
+  'footer',
   'help',
   'hero-body',
   'hero-foot',
@@ -109,6 +110,7 @@ export const bulmaComponentList = [
   'panel',
   'progress',
   'radio',
+  'section',
   'select',
   'subtitle',
   'table',
@@ -116,6 +118,7 @@ export const bulmaComponentList = [
   'tag',
   'tags',
   'textarea',
+  'tile',
   'title'
 ]
 
