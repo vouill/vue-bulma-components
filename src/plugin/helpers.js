@@ -28,6 +28,8 @@ export const bulmaComponentList = [
   'card-content',
   'card-footer-item',
   'card-footer',
+  'card-header-title',
+  'card-header',
   'card-image',
   'card',
   'checkbox',
