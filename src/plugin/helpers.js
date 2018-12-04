@@ -129,7 +129,7 @@ export const camelCaseToDash = myStr =>
   myStr
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .toLowerCase()
-    .replace(/([^0-9])([a-z])([0-9])/g, '$1-$2')
+    .replace(/(([a-z])(?![0-9]))([a-z])([0-9])/g, '$2$3-$4')
 
 // thanks the solution @israelroldan
 export const isBulmaAttribute = attr =>
