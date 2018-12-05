@@ -10,6 +10,7 @@ describe('Helpers', () => {
     expect(camelCaseToDash('is-')).toEqual('is-')
     expect(camelCaseToDash('is2')).toEqual('is-2')
     expect(camelCaseToDash('Is2')).toEqual('is-2')
+    expect(camelCaseToDash('is-128x128')).toEqual('is-128x128')
   })
 
   it('should find Bulma class', () => {
