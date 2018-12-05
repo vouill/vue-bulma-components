@@ -43,6 +43,15 @@ describe('Bulma component generator ', () => {
     expect(wrapper2.html()).toMatchSnapshot()
   })
 
+  it('should create a basic bulma image component with set size', () => {
+    const wrapper = shallowMount(componentGenerator('image'), {
+      context: {
+        props: { 'is-64x64': true }
+      }
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('should create a basic bulma component with modifiers binded to false', () => {
     const wrapper = shallowMount(componentGenerator('box'), {
       context: {
