@@ -1,4 +1,8 @@
-import { camelCaseToDash, isBulmaAttribute } from 'src/plugin/helpers'
+import {
+  camelCaseToDash,
+  isBulmaAttribute,
+  toPascalCase
+} from 'src/plugin/helpers'
 
 describe('Helpers', () => {
   it('should convert camel to dash case', () => {
@@ -23,5 +27,16 @@ describe('Helpers', () => {
     expect(isBulmaAttribute('is-primary')).toEqual(true)
     expect(isBulmaAttribute('has-text-centered')).toEqual(true)
     expect(isBulmaAttribute('fa-home')).toEqual(true)
+  })
+
+  it('should convert string to PascalCase', () => {
+    expect(toPascalCase('string')).toEqual('String')
+    expect(toPascalCase('camelCase')).toEqual('CamelCase')
+    expect(toPascalCase('param-case')).toEqual('ParamCase')
+    expect(toPascalCase('PascalCase')).toEqual('PascalCase')
+    expect(toPascalCase('UPPER_CASE')).toEqual('UpperCase')
+    expect(toPascalCase('snake_case')).toEqual('SnakeCase')
+    expect(toPascalCase('sentence case')).toEqual('SentenceCase')
+    expect(toPascalCase('Title Case')).toEqual('TitleCase')
   })
 })
