@@ -51,6 +51,17 @@ Vue-bulma-component way:
 
 Much nicer right ? ;)
 
+
+**Note:**
+
+You can also use the Pascal case notation, example:
+
+``` html
+<BButton is-dark :is-loading="bool">
+  Send
+</BButton>
+```
+
 ## Install
 
 ```shell
@@ -72,7 +83,7 @@ import vueBulmaComponents from 'vue-bulma-components'
 Vue.use(vueBulmaComponents)
 ```
 
-It will make globallly available all [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components with the prefix `b-`.
+It will make globallly available all [these](https://github.com/vouill/vue-bulma-components/blob/master/src/plugin/helpers.js#L22) bulma components with the prefix `b-` or `B` if you prefer the Pascal case component naming.
 
 You can also change the default prefix of all the bulma components (to avoid collision with existing components in your project)
 
@@ -147,6 +158,7 @@ Usage:
 `bulmaComponentGenerator(bulma_coponent_name,rendered_outer_html_element )`.
 
 Note: `rendered_outer_html_element` is optional.
+
 
 ## Known limitations:
 
