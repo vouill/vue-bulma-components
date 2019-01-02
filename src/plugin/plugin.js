@@ -1,11 +1,12 @@
 import { componentGenerator } from './components'
-import { bulmaComponentList } from './helpers'
+import { bulmaComponentList, toPascalCase } from './helpers'
 
 let plugin = {}
 
 plugin.install = function (Vue, option) {
   bulmaComponentList.forEach(name => {
-    Vue.component(`${(option && option.prefix) || 'b-'}${name}`, componentGenerator(name, (option && option.outerElement[name]) || ''))
+    const componentName = toPascalCase(`${(option && option.prefix) || 'b-'}${name}`)
+    Vue.component(componentName, componentGenerator(name, (option && option.outerElement[name]) || ''))
   })
 }
 

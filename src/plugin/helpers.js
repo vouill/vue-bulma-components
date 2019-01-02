@@ -163,6 +163,17 @@ export const camelCaseToDash = myStr =>
     .toLowerCase()
     .replace(/(([a-z])(?![0-9]))([a-z])([0-9])/g, '$2$3-$4')
 
+export const toPascalCase = str => {
+  if (!str) return ''
+
+  return String(str)
+    .replace(/^[^A-Za-z0-9]*|[^A-Za-z0-9]*$/g, '$')
+    .replace(/[^A-Za-z0-9]+/g, '$')
+    .replace(/([a-z])([A-Z])/g, (m, a, b) => a + '$' + b)
+    .toLowerCase()
+    .replace(/(\$)(\w?)/g, (m, a, b) => b.toUpperCase())
+}
+
 // thanks the solution @israelroldan
 export const isBulmaAttribute = attr =>
   attr.trim() && /^(is|has|fa)-.+/.test(attr)
