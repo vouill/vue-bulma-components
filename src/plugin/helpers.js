@@ -1,11 +1,11 @@
 /**
  * Created by Vouill on 23/07/17.
+ *
+ * By default, components are rendered as div. This is not useful for components such as input for example.
+ * This map makes possible a custom default value for the following components.
+ * Key: Bulma component name ; Value: default rendered html tag
  */
-/*
-*   By default, components are rendered as div. This is not useful for components such as input for example.
-*   This map makes possible a custom default value for the following components.
-*   Key: Bulma component name ; Value: default rendered html tag
-*/
+
 export const vueBulmaDefaultRenderElement = new Map([
   ['breadcrumb', 'nav'],
   ['button', 'button'],
@@ -50,8 +50,8 @@ export const vueBulmaDefaultRenderElement = new Map([
 ])
 
 /*
-*   This is the list of all available vue-bulma-components rendered when using Vue.use(). If one is missing, add it here.
-*/
+ * This is the list of all available vue-bulma-components rendered when using Vue.use(). If one is missing, add it here.
+ */
 export const bulmaComponentList = [
   'box',
   'breadcrumb',
@@ -176,10 +176,11 @@ export const toPascalCase = str => {
 
 // thanks the solution @israelroldan
 export const isBulmaAttribute = attr =>
-  attr.trim() && /^(is|has|fa)-.+/.test(attr)
+  attr.trim() && /^(is|are|has|fa)-.+/.test(attr)
 
 const internalAttribute = ['outerElement', 'outer-element']
-export const isInternalAttribute = attr => attr.trim() && internalAttribute.indexOf(attr) > -1
+export const isInternalAttribute = attr =>
+  attr.trim() && internalAttribute.indexOf(attr) > -1
 
 export const getOutrEl = (outrEl, reqOutrEl, elName, defaultEl = 'div') =>
   outrEl || reqOutrEl || vueBulmaDefaultRenderElement.get(elName) || defaultEl
