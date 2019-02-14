@@ -52,6 +52,15 @@ describe('Bulma component generator ', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
+  it('should create a basic bulma buttons component with set size', () => {
+    const wrapper = shallowMount(componentGenerator('buttons'), {
+      context: {
+        props: { 'are-large': true }
+      }
+    })
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('should create a basic bulma component with modifiers binded to false', () => {
     const wrapper = shallowMount(componentGenerator('box'), {
       context: {
