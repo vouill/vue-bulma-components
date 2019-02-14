@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Bulma component generator  should create a basic bulma buttons component with set size 1`] = `"<div class=\\"buttons are-large\\"></div>"`;
+
 exports[`Bulma component generator  should create a basic bulma component 1`] = `"<div class=\\"panel\\"></div>"`;
 
 exports[`Bulma component generator  should create a basic bulma component with modifiers 1`] = `"<span class=\\"box is-primary\\"></span>"`;
