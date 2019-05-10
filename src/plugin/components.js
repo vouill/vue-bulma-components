@@ -18,15 +18,18 @@ export const componentGenerator = (name, reqOuterElement) => ({
       })
     }
 
+    const bulmaClasses = Object.keys(otherProps)
+      .filter(key => otherProps[key] !== false)
+      .map(str => camelCaseToDash(str))
+      .filter(key => isBulmaAttribute(key))
+
     const attrs = {
+      ...data,
       class: [
         camelCaseToDash(name),
-        ...Object.keys(otherProps)
-          .filter(key => otherProps[key] !== false)
-          .map(str => camelCaseToDash(str))
-          .filter(key => isBulmaAttribute(key))
-      ],
-      ...data
+        ...bulmaClasses,
+        data.class
+      ]
     }
 
     return h(getOutrEl(outerElement, reqOuterElement, name), attrs, children)

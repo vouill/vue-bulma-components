@@ -62,6 +62,16 @@ You can also use the Pascal case notation, example:
 </BButton>
 ```
 
+### Using custom classes
+
+If you want to add any other class simply use the normal class attribute
+
+``` html
+<b-button is-dark :class="my-custom-class">
+  Send
+</b-button>
+```
+
 ## Install
 
 ```shell
